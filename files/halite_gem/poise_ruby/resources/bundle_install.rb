@@ -145,10 +145,12 @@ module PoiseRuby
               # Walk back until path==dirname(path) meaning we are at the root
               while path != (next_path = ::File.dirname(path))
                 possible_path = ::File.join(path, 'Gemfile')
-                return possible_path if ::File.file?(possible_path)
+                break if ::File.file?(possible_path)
                 path = next_path
               end
             end
+
+              possible_path
           end
         end
 
