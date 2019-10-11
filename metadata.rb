@@ -25,7 +25,7 @@ issues_url "https://github.com/poise/poise-ruby/issues" if defined?(issues_url)
 license "Apache-2.0"
 depends "poise", "~> 2.0"
 depends "poise-languages", "~> 2.0"
-chef_version ">= 12.14", "< 15" if defined?(chef_version)
+chef_version ">= 12.14" if defined?(chef_version)
 supports "ubuntu"
 supports "debian"
 supports "centos"
